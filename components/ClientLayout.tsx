@@ -14,16 +14,17 @@ export default function ClientLayout({
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
   const isHome = pathname === '/';
+  const isRashidHeights = pathname === '/rashid-heights';
+  const shouldShowSplash = isHome || isRashidHeights;
 
   useEffect(() => {
-    // Only show splash screen on home page
-    if (isHome) {
-        // Simulate loading time or wait for animation
+    // Show splash screen on home page and Rashid Heights page
+    if (shouldShowSplash) {
         // The SplashScreen component calls finishLoading when its animation is done
     } else {
         setIsLoading(false);
     }
-  }, [isHome]);
+  }, [shouldShowSplash]);
 
   const handleFinishLoading = () => {
       // Add a small buffer to ensure smoothness
@@ -33,7 +34,7 @@ export default function ClientLayout({
   return (
     <>
       <AnimatePresence mode="wait">
-        {isLoading && isHome && (
+        {isLoading && shouldShowSplash && (
           <SplashScreen key="splash" finishLoading={handleFinishLoading} />
         )}
       </AnimatePresence>

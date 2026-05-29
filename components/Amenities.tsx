@@ -72,21 +72,21 @@ export default function Amenities() {
       <div className="container mx-auto max-w-6xl">
         <FadeIn>
           <div className="mb-12 text-center flex flex-col items-center">
-            <h2 className="text-3xl md:text-5xl font-serif text-meethaq-primary mb-4">
+            <h2 className="text-3xl md:text-5xl font-serif text-safe-primary mb-4">
               Premium Amenities
             </h2>
-            <div className="h-1 w-20 bg-meethaq-accent"></div>
+            <div className="h-1 w-20 bg-safe-accent"></div>
           </div>
         </FadeIn>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
           {amenities.map((amenity, index) => (
             <FadeIn key={index} delay={index * 0.05} className="h-full">
-              <div className="flex flex-col items-center justify-center p-8 bg-[#f9f9f9] rounded-lg hover:shadow-md transition duration-300 border border-transparent hover:border-meethaq-accent/20 group h-full">
-                <div className="mb-4 text-meethaq-primary group-hover:text-meethaq-secondary transition duration-300 bg-white p-3 rounded-full shadow-sm">
+              <div className="flex flex-col items-center justify-center p-8 bg-[#f9f9f9] rounded-lg hover:shadow-md transition duration-300 border border-transparent hover:border-safe-accent/20 group h-full">
+                <div className="mb-4 text-safe-primary group-hover:text-safe-accent transition duration-300 bg-white p-3 rounded-full shadow-sm">
                   {amenity.icon}
                 </div>
-                <h3 className="text-xs font-bold text-meethaq-primary text-center tracking-widest uppercase">
+                <h3 className="text-xs font-bold text-safe-primary text-center tracking-widest uppercase">
                   {amenity.name}
                 </h3>
               </div>

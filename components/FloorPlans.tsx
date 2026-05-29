@@ -5,7 +5,8 @@ import { InfoCircle } from "iconoir-react";
 
 const units = [
   {
-    id: "A1",
+    id: "1 Bedroom",
+    icon: "ri-home-4-line",
     image: "/img/a1.png",
     area: "106.57M²",
     internal: "90.27M²",
@@ -15,7 +16,8 @@ const units = [
     reverse: false,
   },
   {
-    id: "B1",
+    id: "2 Bedroom",
+    icon: "ri-home-5-line",
     image: "/img/b1.png",
     area: "117.41M²",
     internal: "99.45M²",
@@ -25,7 +27,8 @@ const units = [
     reverse: true,
   },
   {
-    id: "C1",
+    id: "3 Bedroom",
+    icon: "ri-home-8-line",
     image: "/img/c1.png",
     area: "184.94M²",
     internal: "156.65M²",
@@ -34,20 +37,53 @@ const units = [
     baths: "3 BATHROOM",
     reverse: false,
   },
+  {
+    id: "Office Space",
+    icon: "ri-building-line",
+    image: "/img/a1.png",
+    area: "150.00M²",
+    internal: "130.00M²",
+    external: "20.00M²",
+    beds: "COMMERCIAL",
+    baths: "2 BATHROOM",
+    reverse: true,
+  },
+  {
+    id: "Shop Space",
+    icon: "ri-store-3-line",
+    image: "/img/b1.png",
+    area: "80.00M²",
+    internal: "70.00M²",
+    external: "10.00M²",
+    beds: "RETAIL",
+    baths: "1 BATHROOM",
+    reverse: false,
+  },
+  {
+    id: "Restaurant",
+    icon: "ri-restaurant-line",
+    image: "/img/c1.png",
+    area: "200.00M²",
+    internal: "170.00M²",
+    external: "30.00M²",
+    beds: "DINING",
+    baths: "4 BATHROOM",
+    reverse: true,
+  },
 ];
 
 export default function FloorPlans() {
   return (
-    <section className="bg-white py-12 md:py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 space-y-24 md:space-y-32">
+    <section className="bg-white py-12 sm:py-16 md:py-24 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 space-y-16 sm:space-y-20 md:space-y-24 lg:space-y-32">
         {units.map((unit, index) => (
           <FadeIn key={unit.id} delay={index * 0.1}>
             <div
-              className={`flex flex-col ${unit.reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-12 lg:gap-24`}
+              className={`flex flex-col ${unit.reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-8 md:gap-12 lg:gap-24`}
             >
               {/* Image Section */}
               <div className="w-full md:w-3/5 relative group">
-                <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full">
+                <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] w-full">
                   <Image
                     src={unit.image}
                     alt={`Floor Plan ${unit.id}`}
@@ -68,34 +104,37 @@ export default function FloorPlans() {
               </div>
 
               {/* Details Section */}
-              <div className="w-full md:w-2/5 space-y-8 md:space-y-12">
+              <div className="w-full md:w-2/5 space-y-6 sm:space-y-8 md:space-y-12">
                 {/* Header */}
-                <div className="flex items-baseline gap-4 border-b border-gray-100 pb-4">
-                  <span className="text-3xl font-bold text-meethaq-primary">
-                    {unit.id}
-                  </span>
-                  <span className="text-xl font-medium text-gray-500">
+                <div className="flex items-baseline gap-3 sm:gap-4 border-b border-gray-100 pb-4">
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <i className={`${unit.icon} text-2xl sm:text-3xl text-safe-accent`} />
+                    <span className="text-2xl sm:text-3xl font-bold text-safe-primary">
+                      {unit.id}
+                    </span>
+                  </div>
+                  <span className="text-lg sm:text-xl font-medium text-gray-500">
                     {unit.area}
                   </span>
                 </div>
 
                 {/* Main Features */}
                 <div className="space-y-2">
-                  <h3 className="text-3xl md:text-4xl font-serif text-meethaq-primary">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-safe-primary">
                     {unit.beds}
                   </h3>
-                  <h3 className="text-3xl md:text-4xl font-serif text-meethaq-primary opacity-80">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-safe-primary opacity-80">
                     {unit.baths}
                   </h3>
                 </div>
 
                 {/* Measurements */}
-                <div className="grid grid-cols-2 gap-8 pt-4">
+                <div className="grid grid-cols-2 gap-4 sm:gap-8 pt-4">
                   <div className="space-y-1">
                     <p className="text-xs uppercase tracking-widest text-gray-400">
                       Internal
                     </p>
-                    <p className="text-xl font-bold text-meethaq-primary">
+                    <p className="text-lg sm:text-xl font-bold text-safe-primary">
                       {unit.internal}
                     </p>
                   </div>
@@ -103,7 +142,7 @@ export default function FloorPlans() {
                     <p className="text-xs uppercase tracking-widest text-gray-400">
                       External
                     </p>
-                    <p className="text-xl font-bold text-meethaq-primary">
+                    <p className="text-lg sm:text-xl font-bold text-safe-primary">
                       {unit.external}
                     </p>
                   </div>
@@ -111,7 +150,7 @@ export default function FloorPlans() {
 
                 {/* CTA Button */}
                 <div className="pt-4">
-                  <button className="bg-meethaq-primary text-white px-8 py-3 rounded-full text-sm font-bold tracking-wider hover:bg-meethaq-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                  <button className="bg-safe-primary text-white px-6 py-3 sm:px-8 sm:py-3 rounded-full text-xs sm:text-sm font-bold tracking-wider hover:bg-safe-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl">
                     DETAILS
                   </button>
                 </div>

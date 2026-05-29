@@ -90,7 +90,7 @@ const locationImages = [
 
 export default function Location() {
   return (
-    <section className="bg-meethaq-primary py-20 px-4 text-white">
+    <section className="bg-safe-primary py-20 px-4 text-white">
       <div className="container mx-auto max-w-[1400px]">
         <div className="text-center mb-16">
           <FadeIn>
@@ -99,8 +99,8 @@ export default function Location() {
             </h2>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p className="text-lg md:text-xl text-meethaq-accent font-light italic max-w-3xl mx-auto">
-              Few addresses compare to the accessibility and prestige of Upanga.
+            <p className="text-lg md:text-xl text-safe-accent font-light italic max-w-3xl mx-auto">
+              Few addresses compare to the accessibility and prestige of Tanga.
             </p>
           </FadeIn>
         </div>
@@ -145,7 +145,7 @@ export default function Location() {
           {locationData.map((section, idx) => (
             <FadeIn key={idx} delay={0.3 + idx * 0.1}>
               <div className="flex flex-col h-full">
-                <h3 className="text-xs font-bold text-meethaq-accent mb-4 uppercase tracking-widest border-b border-white/20 pb-2">
+                <h3 className="text-xs font-bold text-safe-accent mb-4 uppercase tracking-widest border-b border-white/20 pb-2">
                   {section.category}
                 </h3>
                 <ul className="space-y-2">
@@ -171,7 +171,7 @@ export default function Location() {
 
         <div className="mt-16 text-center">
           <FadeIn delay={0.8}>
-            <button className="border border-white text-white px-8 py-3 text-xs tracking-widest hover:bg-white hover:text-meethaq-primary transition rounded-full">
+            <button className="border border-white text-white px-8 py-3 text-xs tracking-widest hover:bg-white hover:text-safe-primary transition rounded-full">
               VIEW ON MAP
             </button>
           </FadeIn>

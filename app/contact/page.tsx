@@ -3,15 +3,15 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import { Instagram, Twitter, Facebook, Youtube } from "iconoir-react";
 import Footer from "@/components/Footer";
 
 export default function ContactPage() {
   const [formData, setFormData] = React.useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
-    _honey: "", // Honeypot field
+    _honey: "",
   });
   const [status, setStatus] = React.useState<
     "idle" | "submitting" | "success" | "error"
@@ -43,9 +43,9 @@ export default function ContactPage() {
       if (response.ok && result.status === "success") {
         setStatus("success");
         setNotification(
-          "Email sent successfully! We will get back to you soon.",
+          "Message sent successfully! We will get back to you soon.",
         );
-        setFormData({ name: "", email: "", message: "", _honey: "" }); // Reset form
+        setFormData({ name: "", email: "", phone: "", message: "", _honey: "" });
       } else {
         setStatus("error");
         setNotification(
@@ -59,74 +59,91 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col font-sans bg-white pt-[80px]">
+    <main className="min-h-screen flex flex-col bg-white pt-[80px]">
       <Navbar variant="solid" />
 
       <div className="flex-grow flex flex-col md:flex-row h-full">
         {/* Left Side - Image */}
-        <div className="w-full md:w-1/2 relative min-h-[50vh] md:min-h-[calc(100vh-80px)] p-4 md:p-8">
+        <div className="w-full md:w-1/2 relative min-h-[40vh] md:min-h-[50vh] md:min-h-[calc(100vh-80px)] p-3 sm:p-4 md:p-8">
           <div className="relative w-full h-full rounded-2xl overflow-hidden">
             <Image
               src="/img/build1.png"
-              alt="Meethaq Tower"
+              alt="Safe Investment"
               fill
               className="object-cover"
             />
 
-            {/* Social Media Card */}
-            <div className="absolute bottom-8 left-8 bg-white p-6 rounded-2xl shadow-lg max-w-xs w-[calc(100%-4rem)] space-y-6">
+            {/* Contact Info Card */}
+            <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 bg-white/95 backdrop-blur p-4 sm:p-6 rounded-2xl shadow-lg max-w-[280px] sm:max-w-xs w-[calc(100%-2rem)] sm:w-[calc(100%-4rem)] space-y-4 sm:space-y-6">
               <div>
-                <p className="text-gray-500 text-xs uppercase tracking-widest font-bold mb-2">
+                <p className="text-gray-500 text-[10px] sm:text-xs uppercase tracking-widest font-bold mb-1 sm:mb-2">
                   Call Us
                 </p>
                 <a
-                  href="tel:+255770990980"
-                  className="text-lg font-bold text-meethaq-primary hover:text-meethaq-primary/80 transition"
+                  href="tel:+25574637371"
+                  className="text-base sm:text-lg font-bold text-safe-primary hover:text-safe-accent transition"
                 >
-                  +255 770 990 980
+                  +255 746 373 71
                 </a>
               </div>
 
               <div>
-                <p className="text-gray-500 text-xs uppercase tracking-widest font-bold mb-2">
+                <p className="text-gray-500 text-[10px] sm:text-xs uppercase tracking-widest font-bold mb-1 sm:mb-2">
                   Email Us
                 </p>
                 <a
-                  href="mailto:reservation@vanmotz.com"
-                  className="text-lg font-bold text-meethaq-primary hover:text-meethaq-primary/80 transition break-words"
+                  href="mailto:sales@safeinvestment.co.tz"
+                  className="text-base sm:text-lg font-bold text-safe-primary hover:text-safe-accent transition break-words"
                 >
-                  reservation@vanmotz.com
+                  sales@safeinvestment.co.tz
                 </a>
               </div>
 
               <div>
-                <p className="text-gray-600 mb-4 font-medium">
-                  Follow us on social media
+                <p className="text-gray-500 text-[10px] sm:text-xs uppercase tracking-widest font-bold mb-1 sm:mb-2">
+                  Location
                 </p>
-                <div className="flex gap-4">
+                <p className="text-sm sm:text-base font-medium text-safe-primary">
+                  Tanga, Tanzania
+                </p>
+              </div>
+
+              <div>
+                <p className="text-gray-600 mb-3 sm:mb-4 font-medium text-xs sm:text-sm">
+                  Connect with us
+                </p>
+                <div className="flex gap-2 sm:gap-3">
                   <a
-                    href="#"
-                    className="w-10 h-10 bg-black text-white flex items-center justify-center rounded-lg hover:bg-gray-800 transition"
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 sm:w-10 sm:h-10 bg-safe-primary text-white flex items-center justify-center rounded-xl hover:bg-safe-accent transition"
                   >
-                    <Instagram className="w-5 h-5" />
+                    <i className="ri-instagram-line text-base sm:text-lg" />
                   </a>
                   <a
-                    href="#"
-                    className="w-10 h-10 bg-black text-white flex items-center justify-center rounded-lg hover:bg-gray-800 transition"
+                    href="https://facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 sm:w-10 sm:h-10 bg-safe-primary text-white flex items-center justify-center rounded-xl hover:bg-safe-accent transition"
                   >
-                    <Twitter className="w-5 h-5" />
+                    <i className="ri-facebook-fill text-base sm:text-lg" />
                   </a>
                   <a
-                    href="#"
-                    className="w-10 h-10 bg-black text-white flex items-center justify-center rounded-lg hover:bg-gray-800 transition"
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 sm:w-10 sm:h-10 bg-safe-primary text-white flex items-center justify-center rounded-xl hover:bg-safe-accent transition"
                   >
-                    <Facebook className="w-5 h-5" />
+                    <i className="ri-linkedin-fill text-base sm:text-lg" />
                   </a>
                   <a
-                    href="#"
-                    className="w-10 h-10 bg-black text-white flex items-center justify-center rounded-lg hover:bg-gray-800 transition"
+                    href="https://wa.me/25574637371"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 sm:w-10 sm:h-10 bg-safe-primary text-white flex items-center justify-center rounded-xl hover:bg-safe-accent transition"
                   >
-                    <Youtube className="w-5 h-5" />
+                    <i className="ri-whatsapp-line text-base sm:text-lg" />
                   </a>
                 </div>
               </div>
@@ -135,18 +152,20 @@ export default function ContactPage() {
         </div>
 
         {/* Right Side - Form */}
-        <div className="w-full md:w-1/2 bg-[#F3F3F0] p-8 md:p-16 lg:p-24 flex flex-col justify-center">
+        <div className="w-full md:w-1/2 bg-[#f7f8f3] p-6 sm:p-8 md:p-16 lg:p-24 flex flex-col justify-center">
           <div className="max-w-lg w-full mx-auto">
-            <span className="uppercase tracking-widest text-xs font-bold text-gray-500 mb-4 block">
+            <span className="uppercase tracking-widest text-[10px] sm:text-xs font-bold text-safe-accent mb-3 sm:mb-4 block">
               CONTACT
             </span>
-            <h1 className="text-4xl md:text-5xl font-serif text-[#1a2b4b] mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl md:text-5xl font-semibold text-safe-primary mb-3 sm:mb-4">
               Get in touch
             </h1>
-            <p className="text-gray-500 mb-12">We'd love to hear from you!</p>
+            <p className="text-sm sm:text-base text-[#536153] mb-8 sm:mb-12">
+              We'd love to hear from you! Reach out for inquiries about our
+              properties, construction services, or investment opportunities.
+            </p>
 
-            <form className="space-y-6" onSubmit={handleSubmit}>
-              {/* Honeypot field - hidden from users */}
+            <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
               <input
                 type="text"
                 id="_honey"
@@ -160,7 +179,7 @@ export default function ContactPage() {
               <div className="space-y-2">
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-semibold text-safe-primary"
                 >
                   Name
                 </label>
@@ -171,34 +190,53 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   placeholder="Your full name"
-                  className="w-full px-4 py-3 rounded-lg bg-[#E8E8E5] border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 transition duration-200 outline-none text-gray-800 placeholder-gray-400"
+                  className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-2xl bg-white border border-safe-primary/10 focus:border-safe-accent focus:ring-0 transition duration-200 outline-none text-gray-800 placeholder-gray-400"
                 />
               </div>
 
-              <div className="space-y-2">
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Your email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder="Your email address"
-                  className="w-full px-4 py-3 rounded-lg bg-[#E8E8E5] border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 transition duration-200 outline-none text-gray-800 placeholder-gray-400"
-                />
+              <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
+                <div className="space-y-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-semibold text-safe-primary"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder="you@example.com"
+                    className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-2xl bg-white border border-safe-primary/10 focus:border-safe-accent focus:ring-0 transition duration-200 outline-none text-gray-800 placeholder-gray-400"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-semibold text-safe-primary"
+                  >
+                    Phone
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    placeholder="+255 700 000 000"
+                    className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-2xl bg-white border border-safe-primary/10 focus:border-safe-accent focus:ring-0 transition duration-200 outline-none text-gray-800 placeholder-gray-400"
+                  />
+                </div>
               </div>
 
               <div className="space-y-2">
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-semibold text-safe-primary"
                 >
-                  Your messages
+                  Message
                 </label>
                 <textarea
                   id="message"
@@ -206,14 +244,14 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  placeholder="Your messages here"
-                  className="w-full px-4 py-3 rounded-lg bg-[#E8E8E5] border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 transition duration-200 outline-none text-gray-800 placeholder-gray-400 resize-none"
+                  placeholder="Tell us what you're looking for..."
+                  className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-2xl bg-white border border-safe-primary/10 focus:border-safe-accent focus:ring-0 transition duration-200 outline-none text-gray-800 placeholder-gray-400 resize-none"
                 ></textarea>
               </div>
 
               {notification && (
                 <div
-                  className={`p-4 rounded-lg text-sm ${status === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}
+                  className={`p-4 rounded-2xl text-sm ${status === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}
                 >
                   {notification}
                 </div>
@@ -222,9 +260,9 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className={`bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition duration-200 mt-4 ${status === "submitting" ? "opacity-50 cursor-not-allowed" : ""}`}
+                className={`w-full bg-safe-primary text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold uppercase tracking-widest hover:bg-safe-primary/90 transition duration-200 mt-4 text-xs sm:text-sm ${status === "submitting" ? "opacity-50 cursor-not-allowed" : ""}`}
               >
-                {status === "submitting" ? "Sending..." : "Submit"}
+                {status === "submitting" ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>

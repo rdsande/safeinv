@@ -9,6 +9,35 @@ export default function SplashScreen({
 }: {
   finishLoading: () => void;
 }) {
+  const [percentage, setPercentage] = useState(0);
+
+  useEffect(() => {
+    const duration = 2500; // 2.5 seconds
+    const interval = 25; // Update every 25ms
+    const steps = duration / interval;
+    const increment = 100 / steps;
+
+    const timer = setInterval(() => {
+      setPercentage((prev) => {
+        const next = prev + increment;
+        if (next >= 100) {
+          clearInterval(timer);
+          return 100;
+        }
+        return next;
+      });
+    }, interval);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  // Call finishLoading when percentage reaches 100
+  React.useEffect(() => {
+    if (percentage >= 100) {
+      setTimeout(() => finishLoading(), 200);
+    }
+  }, [percentage, finishLoading]);
+
   return (
     <motion.div
       initial={{ opacity: 1 }}
@@ -31,22 +60,14 @@ export default function SplashScreen({
           />
         </motion.div>
 
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: 200 }}
-          transition={{ delay: 0.5, duration: 1.5, ease: "easeInOut" }}
-          className="h-1 bg-safe-accent rounded-full"
-          onAnimationComplete={finishLoading}
-        />
-
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="mt-6 text-white text-sm md:text-xl tracking-[0.2em]"
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="text-white text-sm md:text-lg tracking-[0.2em]"
         >
-          SAFE INVESTMENT
-        </motion.h1>
+          Loading {Math.round(percentage)}%
+        </motion.p>
       </div>
     </motion.div>
   );

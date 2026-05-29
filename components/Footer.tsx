@@ -10,13 +10,9 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1.8fr] pb-16 border-b border-white/10">
           {/* Left Column: Brand, Slogan, Socials */}
           <div className="space-y-8">
-            <Image
-              src="/img/safelogolight.png"
-              alt="Safe Investment"
-              width={160}
-              height={50}
-              className="h-10 w-auto"
-            />
+            <h2 className="text-2xl font-bold text-white tracking-wider">
+              SAFE INVESTMENT
+            </h2>
             <p className="text-white/60 text-base max-w-sm leading-relaxed">
               Secure spaces. Smart investments. Connecting you with premium residential, commercial, and warehousing solutions in coastal Tanga.
             </p>
@@ -117,8 +113,8 @@ export default function Footer() {
         {/* Bottom Giant Brand Text & Copyright */}
         <div className="pt-12 flex flex-col items-center">
           {/* Massive footer signature text like Contelas mockup */}
-          <div className="w-full text-center select-none overflow-hidden h-24 sm:h-36 md:h-44 lg:h-56 flex items-center justify-center">
-            <h1 className="text-[12vw] font-bold text-safe-accent/15 tracking-tighter leading-none uppercase">
+          <div className="w-full text-center select-none overflow-hidden h-16 sm:h-20 md:h-24 flex items-center justify-center">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-safe-accent/15 tracking-tighter leading-none uppercase whitespace-nowrap">
               SAFE INVESTMENT
             </h1>
           </div>

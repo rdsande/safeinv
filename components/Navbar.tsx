@@ -26,13 +26,13 @@ export default function Navbar({
   const hoverColor = isTop ? "hover:text-white/70" : "hover:text-safe-accent";
 
   const projects = [
-    { name: "Rashid Heights", href: "/#rashid-heights", location: "Tanga, Tanzania · Now Rising" },
+    { name: "Rashid Heights", href: "/rashid-heights", location: "Tanga, Tanzania · Now Rising" },
   ];
 
   const mobileLinks = [
     { name: "ABOUT", href: "/#about" },
     { name: "SERVICES", href: "/#services" },
-    { name: "RASHID HEIGHTS", href: "/#rashid-heights" },
+    { name: "RASHID HEIGHTS", href: "/rashid-heights" },
     { name: "WHATSAPP", href: "https://wa.me/255770990980" },
     { name: "GET IN TOUCH", href: "/#contact" },
   ];
