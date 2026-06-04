@@ -21,9 +21,9 @@ export default function Navbar({
   }, []);
 
   const isTop = variant === "transparent" && !isScrolled;
-  const textColor = isTop ? "text-white" : "text-safe-primary";
-  const logoSrc = isTop ? "/img/safelogolight.png" : "/img/safelogo.png";
-  const hoverColor = isTop ? "hover:text-white/70" : "hover:text-safe-accent";
+  const textColor = "text-safe-primary";
+  const logoSrc = "/img/safelogo.png";
+  const hoverColor = "hover:text-safe-accent";
 
   const projects = [
     { name: "Rashid Heights", href: "/rashid-heights", location: "Tanga, Tanzania · Now Rising" },
@@ -33,41 +33,17 @@ export default function Navbar({
     { name: "ABOUT", href: "/#about" },
     { name: "SERVICES", href: "/#services" },
     { name: "RASHID HEIGHTS", href: "/rashid-heights" },
-    { name: "WHATSAPP", href: "https://wa.me/255770990980" },
+    { name: "WHATSAPP", href: "https://wa.me/255764485751" },
     { name: "GET IN TOUCH", href: "/#contact" },
   ];
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
-      {/* Top contact bar */}
-      <div
-        className={`transition-all duration-300 overflow-hidden ${
-          isScrolled ? "max-h-0 opacity-0 py-0" : "max-h-12 opacity-100"
-        } ${isTop ? "bg-[#1a2e1a]" : "bg-safe-primary"}`}
-      >
-        <div className="container mx-auto px-4 flex justify-end items-center gap-6 py-2 text-[11px] tracking-wider text-white/70">
-          <a
-            href="tel:+25574637371"
-            className="hidden sm:flex items-center gap-1.5 hover:text-white transition"
-          >
-            <i className="ri-phone-line" />
-            +255 746 373 71
-          </a>
-          <a
-            href="mailto:sales@safeinvestment.co.tz"
-            className="flex items-center gap-1.5 hover:text-white transition"
-          >
-            <i className="ri-mail-line" />
-            sales@safeinvestment.co.tz
-          </a>
-        </div>
-      </div>
-
       {/* Main nav */}
       <nav
         className={`transition-all duration-300 ${
           isTop
-            ? "bg-safe-primary border-white/10"
+            ? "bg-white/95 border-gray-100"
             : "bg-white border-gray-200 shadow-sm"
         } ${textColor} text-xs tracking-widest py-4 border-b`}
       >
@@ -140,7 +116,7 @@ export default function Navbar({
             </div>
 
             <a
-              href="https://wa.me/255770990980"
+              href="https://wa.me/255764485751"
               target="_blank"
               rel="noopener noreferrer"
               className={`flex items-center gap-1.5 ${hoverColor} transition`}
@@ -153,7 +129,7 @@ export default function Navbar({
               href="/#contact"
               className={`px-6 py-2 rounded-full font-bold transition whitespace-nowrap ${
                 isTop
-                  ? "bg-white text-safe-primary hover:bg-safe-secondary"
+                  ? "bg-safe-primary text-white hover:bg-safe-accent"
                   : "bg-safe-accent text-white hover:bg-safe-primary"
               }`}
             >
@@ -167,7 +143,7 @@ export default function Navbar({
               href="/#contact"
               className={`px-4 py-2 rounded-full font-bold text-[10px] transition whitespace-nowrap ${
                 isTop
-                  ? "bg-white text-safe-primary hover:bg-safe-secondary"
+                  ? "bg-safe-primary text-white hover:bg-safe-accent"
                   : "bg-safe-accent text-white hover:bg-safe-primary"
               }`}
             >
@@ -210,8 +186,8 @@ export default function Navbar({
                 </Link>
               ))}
               <div className="pt-6 flex flex-col items-center gap-3 text-white/50 text-xs tracking-wider">
-                <a href="tel:+25574637371" className="flex items-center gap-2 hover:text-white transition">
-                  <i className="ri-phone-line" /> +255 746 373 71
+                <a href="tel:+255764485751" className="flex items-center gap-2 hover:text-white transition">
+                  <i className="ri-phone-line" /> +255 764 485 751
                 </a>
                 <a href="mailto:sales@safeinvestment.co.tz" className="flex items-center gap-2 hover:text-white transition">
                   <i className="ri-mail-line" /> sales@safeinvestment.co.tz

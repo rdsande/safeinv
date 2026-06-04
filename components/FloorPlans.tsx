@@ -7,7 +7,7 @@ const units = [
   {
     id: "1 Bedroom",
     icon: "ri-home-4-line",
-    image: "/img/a1.png",
+    image: "/imgs2/JPEG/4.%20typical%20floor%20plan%20-%204th%20to%208th%20floor.jpg",
     area: "106.57M²",
     internal: "90.27M²",
     external: "16.3M²",
@@ -18,7 +18,7 @@ const units = [
   {
     id: "2 Bedroom",
     icon: "ri-home-5-line",
-    image: "/img/b1.png",
+    image: "/imgs2/JPEG/4.%20typical%20floor%20plan%20-%204th%20to%208th%20floor%202.jpg",
     area: "117.41M²",
     internal: "99.45M²",
     external: "17.96M²",
@@ -29,7 +29,7 @@ const units = [
   {
     id: "3 Bedroom",
     icon: "ri-home-8-line",
-    image: "/img/c1.png",
+    image: "/imgs2/JPEG/3.%204%20bhk%20apartment%20-%203rd%20floor%20level.jpg",
     area: "184.94M²",
     internal: "156.65M²",
     external: "28.29M²",
@@ -40,7 +40,7 @@ const units = [
   {
     id: "Office Space",
     icon: "ri-building-line",
-    image: "/img/a1.png",
+    image: "/imgs2/JPEG/2.%20typical%20office%20floor-%20%202nd%20floor.jpg",
     area: "150.00M²",
     internal: "130.00M²",
     external: "20.00M²",
@@ -51,7 +51,7 @@ const units = [
   {
     id: "Shop Space",
     icon: "ri-store-3-line",
-    image: "/img/b1.png",
+    image: "/imgs2/JPEG/1.%20ground%20floor.jpg",
     area: "80.00M²",
     internal: "70.00M²",
     external: "10.00M²",
@@ -62,7 +62,7 @@ const units = [
   {
     id: "Restaurant",
     icon: "ri-restaurant-line",
-    image: "/img/c1.png",
+    image: "/imgs2/JPEG/1.%20ground%20floor.jpg",
     area: "200.00M²",
     internal: "170.00M²",
     external: "30.00M²",

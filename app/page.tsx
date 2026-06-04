@@ -48,30 +48,30 @@ export default async function Home() {
       label: "Sea View Apartments",
       icon: "ri-sailboat-line",
       desc: "Wake up to the Indian Ocean. Prime units positioned to capture Tanga's coastal beauty.",
-      img: "/img/img004.jpg",
+      img: "/imgs2/JPEG/rashidheights.jpg",
     },
     {
       label: "Large Office Spaces",
       icon: "ri-building-4-line",
       desc: "Professional-grade commercial floors for businesses seeking a prestigious Tanga address.",
-      img: "/img/img006.jpg",
+      img: "/imgs2/JPEG/2.%20typical%20office%20floor-%20%202nd%20floor.jpg",
     },
     {
       label: "Shops & Retail Units",
       icon: "ri-store-2-line",
       desc: "Ground-floor retail in a high-visibility landmark location at the heart of Tanga.",
-      img: "/img/build3d.jpg",
+      img: "/imgs2/JPEG/1.%20ground%20floor.jpg",
     },
   ];
 
   return (
-    <main className="min-h-screen flex flex-col bg-[#f7f8f3] text-[#233123]">
+    <main className="min-h-screen flex flex-col bg-white text-[#233123]">
       <Navbar />
 
       {/* HERO */}
       <section className="relative min-h-screen w-full overflow-hidden">
         <Image
-          src="/img/hero.jpg"
+          src="/imgs2/JPEG/rashidheights.jpg"
           alt="Safe Investment property development in Tanga"
           fill
           className="object-cover"
@@ -81,9 +81,6 @@ export default async function Home() {
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/50 to-transparent" />
         <div className="relative z-10 container mx-auto flex min-h-screen items-center px-4 pt-24 sm:pt-32 md:pt-36">
           <FadeInUp className="max-w-3xl text-white">
-            <span className="mb-4 sm:mb-6 inline-flex rounded-full border border-white/30 bg-white/10 px-4 py-2 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] sm:tracking-[0.35em] backdrop-blur">
-              Tanga, Tanzania
-            </span>
             <h1 className="mt-4 sm:mt-6 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold leading-[1.15] sm:leading-[1.1] tracking-tight">
               Safe Investment for property, construction and growth.
             </h1>
@@ -99,7 +96,7 @@ export default async function Home() {
                 Explore Our Projects
               </a>
               <a
-                href="https://wa.me/255770990980"
+                href="https://wa.me/255764485751"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full border border-white/40 px-6 py-3 sm:px-8 sm:py-4 text-center text-xs sm:text-sm font-bold uppercase tracking-widest text-white transition hover:bg-white hover:text-safe-primary"
@@ -120,33 +117,33 @@ export default async function Home() {
               Safe Investment
             </span>
             <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-safe-primary">
-              Property expertise rooted in Tanga.
+              Straightforward property support you can trust.
             </h2>
           </FadeInUp>
           <FadeInUp delay={0.15} className="space-y-6 text-base sm:text-lg leading-7 sm:leading-8 text-[#536153]">
             <p>
-              Safe Investment works across property management, construction,
-              sales and strategic real estate opportunities for people and
-              businesses looking to secure quality spaces in the Tanga region.
+              Safe Investment works with clients who want dependable property
+              opportunities without confusion. We explain the options clearly,
+              guide each step, and focus on practical long-term value.
             </p>
             <p>
-              From homes and commercial addresses to warehousing requirements,
-              we help connect clients with practical, future-focused property
-              solutions.
+              Whether you are buying for family, rental income, or future
+              security, our team helps you make informed decisions with
+              confidence.
             </p>
           </FadeInUp>
         </div>
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-16 sm:py-24">
+      <section id="services" className="bg-[#fbfcf8] py-16 sm:py-24">
         <div className="container mx-auto px-4">
           <FadeInUp className="mb-8 sm:mb-12 max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-[0.3em] text-safe-accent">
               What we do
             </span>
             <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-safe-primary">
-              Real estate solutions for living, working and investing.
+              Simple services for property owners and investors.
             </h2>
           </FadeInUp>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -168,13 +165,13 @@ export default async function Home() {
       </section>
 
       {/* RASHID HEIGHTS */}
-      <section id="rashid-heights" className="bg-safe-primary text-white">
+      <section id="rashid-heights" className="bg-white text-safe-primary">
         {/* Main intro */}
         <div className="py-16 sm:py-24">
           <div className="container mx-auto grid gap-8 lg:gap-12 px-4 lg:grid-cols-2 lg:items-center">
             <FadeInUp className="relative min-h-[400px] sm:min-h-[500px] lg:min-h-[580px] overflow-hidden rounded-[2rem]">
               <Image
-                src="/img/build1.png"
+                src="/imgs2/JPEG/rashidheights.jpg"
                 alt="Rashid Heights development"
                 fill
                 className="object-cover"
@@ -188,25 +185,24 @@ export default async function Home() {
               </div>
             </FadeInUp>
             <FadeInUp delay={0.15}>
-              <span className="text-xs font-bold uppercase tracking-[0.3em] text-white/60">
+              <span className="text-xs font-bold uppercase tracking-[0.3em] text-safe-accent">
                 Featured project
               </span>
               <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold leading-tight">
-                Introducing Rashid Heights.
+                Rashid Heights, a practical investment in Tanga.
               </h2>
-              <p className="mt-6 sm:mt-8 text-base sm:text-lg leading-7 sm:leading-8 text-white/80">
-                A new landmark rising in Tanga, Tanzania. From peaceful
-                sea-facing mornings to elegant penthouse evenings, every space
-                is designed for people who want more than just an address.
+              <p className="mt-6 sm:mt-8 text-base sm:text-lg leading-7 sm:leading-8 text-[#536153]">
+                Rashid Heights offers homes, offices, shops and restaurant
+                spaces in one planned development. It is designed for people
+                who want a clear property opportunity with long-term potential.
               </p>
-              <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-white/80">
-                Whether you&apos;re building a future, investing in lifestyle,
-                or creating a home for generations, this is your opportunity to
-                secure a place.
+              <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-[#536153]">
+                Our team can explain the available units, pricing, payment
+                options and ownership process in simple terms.
               </p>
               <a
                 href="#contact"
-                className="mt-8 sm:mt-10 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 sm:px-8 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-widest text-safe-primary transition hover:bg-white/85"
+                className="mt-8 sm:mt-10 inline-flex items-center gap-2 rounded-full bg-safe-primary px-6 py-3 sm:px-8 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-widest text-white transition hover:bg-safe-accent"
               >
                 <i className="ri-arrow-right-line" />
                 Secure your place
@@ -216,10 +212,10 @@ export default async function Home() {
         </div>
 
         {/* Unit types */}
-        <div className="border-t border-white/10 pb-16 sm:pb-24">
+        <div className="border-t border-safe-primary/10 pb-16 sm:pb-24">
           <div className="container mx-auto px-4">
             <FadeInUp className="pt-12 sm:pt-16 mb-8 sm:mb-10">
-              <span className="text-xs font-bold uppercase tracking-[0.3em] text-white/50">
+              <span className="text-xs font-bold uppercase tracking-[0.3em] text-safe-accent">
                 What&apos;s inside
               </span>
               <h3 className="mt-3 text-2xl sm:text-3xl font-semibold">
@@ -229,7 +225,7 @@ export default async function Home() {
             <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {unitTypes.map((unit, i) => (
                 <FadeInUp key={unit.label} delay={i * 0.1}>
-                  <div className="rounded-2xl overflow-hidden bg-white/5 border border-white/10 h-full flex flex-col">
+                  <div className="rounded-2xl overflow-hidden bg-white border border-safe-primary/10 shadow-sm h-full flex flex-col">
                     <div className="relative h-36 sm:h-48 flex-shrink-0">
                       <Image
                         src={unit.img}
@@ -244,7 +240,7 @@ export default async function Home() {
                       <h4 className="mt-2 font-semibold text-sm sm:text-base">
                         {unit.label}
                       </h4>
-                      <p className="mt-2 text-xs sm:text-sm text-white/60 leading-5 sm:leading-6 flex-1">
+                      <p className="mt-2 text-xs sm:text-sm text-[#536153] leading-5 sm:leading-6 flex-1">
                         {unit.desc}
                       </p>
                     </div>
@@ -254,20 +250,6 @@ export default async function Home() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* IMAGE STRIP */}
-      <section className="grid md:grid-cols-3">
-        {["/img/a1.png", "/img/b1.png", "/img/c1.png"].map((src, index) => (
-          <div key={src} className="relative h-[360px] overflow-hidden">
-            <Image
-              src={src}
-              alt={`Safe Investment property view ${index + 1}`}
-              fill
-              className="object-cover transition duration-700 hover:scale-105"
-            />
-          </div>
-        ))}
       </section>
 
       {/* CONTACT */}
@@ -287,7 +269,7 @@ export default async function Home() {
             </p>
             <div className="mt-6 sm:mt-8 flex flex-col gap-3">
               <a
-                href="https://wa.me/255770990980"
+                href="https://wa.me/255764485751"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-safe-accent px-6 py-3 sm:px-8 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-widest text-white transition hover:bg-safe-accent/90 w-fit"
@@ -296,10 +278,10 @@ export default async function Home() {
                 Message on WhatsApp
               </a>
               <a
-                href="tel:+25574637371"
+                href="tel:+255764485751"
                 className="inline-flex items-center gap-2 text-safe-primary hover:text-safe-accent transition text-xs sm:text-sm mt-2"
               >
-                <i className="ri-phone-line" /> +255 746 373 71
+                <i className="ri-phone-line" /> +255 764 485 751
               </a>
               <a
                 href="mailto:sales@safeinvestment.co.tz"

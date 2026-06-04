@@ -22,7 +22,7 @@ export default function Footer() {
                 { icon: "ri-instagram-line", href: "https://instagram.com" },
                 { icon: "ri-facebook-fill", href: "https://facebook.com" },
                 { icon: "ri-linkedin-fill", href: "https://linkedin.com" },
-                { icon: "ri-whatsapp-line", href: "https://wa.me/255770990980" },
+                { icon: "ri-whatsapp-line", href: "https://wa.me/255764485751" },
               ].map((social, idx) => (
                 <a
                   key={idx}
@@ -91,8 +91,8 @@ export default function Footer() {
               </h4>
               <ul className="space-y-2.5 text-sm text-white/50">
                 <li>
-                  <a href="tel:+25574637371" className="hover:text-white transition flex items-center gap-2">
-                    <i className="ri-phone-line" /> +255 746 373 71
+                  <a href="tel:+255764485751" className="hover:text-white transition flex items-center gap-2">
+                    <i className="ri-phone-line" /> +255 764 485 751
                   </a>
                 </li>
                 <li>

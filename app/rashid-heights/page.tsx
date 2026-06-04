@@ -7,12 +7,13 @@ import Image from "next/image";
 
 export default function RashidHeightsPage() {
   const galleryImages = [
-    "/img/build1.png",
-    "/img/a1.png",
-    "/img/b1.png",
-    "/img/c1.png",
-    "/img/img001.jpg",
-    "/img/img002.jpg",
+    "/imgs2/JPEG/rashidheights.jpg",
+    "/imgs2/JPEG/1.%20ground%20floor.jpg",
+    "/imgs2/JPEG/2.%20typical%20office%20floor-%20%202nd%20floor.jpg",
+    "/imgs2/JPEG/3.%204%20bhk%20apartment%20-%203rd%20floor%20level.jpg",
+    "/imgs2/JPEG/4.%20typical%20floor%20plan%20-%204th%20to%208th%20floor.jpg",
+    "/imgs2/JPEG/5.%20penthouse%20entry%20levelv%20-%209th%20floor.jpg",
+    "/imgs2/JPEG/6.%20penthouse%20upper%20level%20-%2010th%20floor.jpg",
   ];
 
   return (
@@ -20,27 +21,24 @@ export default function RashidHeightsPage() {
       <Navbar variant="solid" />
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] sm:h-[70vh] min-h-[400px] sm:min-h-[500px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] sm:h-[70vh] min-h-[420px] sm:min-h-[520px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/img/build1.png"
+            src="/imgs2/JPEG/rashidheights.jpg"
             alt="Rashid Heights"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#111c11]/90 via-[#111c11]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#111c11]/85 via-[#111c11]/55 to-transparent" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-white">
           <FadeInUp>
-            <span className="inline-block px-3 py-2 sm:px-4 sm:py-2 rounded-full border border-white/30 bg-white/10 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] sm:tracking-[0.3em] backdrop-blur mb-4 sm:mb-6">
-              Featured Project
-            </span>
             <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight tracking-tight mb-3 sm:mb-4">
               Rashid Heights
             </h1>
             <p className="text-base sm:text-xl md:text-2xl text-white/80 max-w-2xl">
-              Now rising in Tanga, Tanzania
+              A clear property investment opportunity in Tanga.
             </p>
           </FadeInUp>
         </div>
@@ -52,38 +50,38 @@ export default function RashidHeightsPage() {
           <div className="max-w-4xl mx-auto">
             <FadeInUp className="text-center mb-8 sm:mb-12">
               <span className="text-xs font-bold uppercase tracking-[0.3em] text-safe-accent">
-                About the Project
+                About the project
               </span>
               <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-safe-primary">
-                Introducing Rashid Heights
+                A practical place to live, work and invest.
               </h2>
             </FadeInUp>
 
             <FadeInUp delay={0.15} className="space-y-6 text-base sm:text-lg leading-7 sm:leading-8 text-[#536153]">
               <p>
-                A new landmark rising in Tanga, Tanzania. From peaceful sea-facing
-                mornings to elegant penthouse evenings, every space is designed
-                for people who want more than just an address.
+                Rashid Heights brings apartments, offices, shops and restaurant
+                spaces into one planned development. It is designed for people
+                who want a property opportunity that is easy to understand and
+                built for long-term value.
               </p>
               <p>
-                Whether you&apos;re building a future, investing in lifestyle, or
-                creating a home for generations, this is your opportunity to secure a
-                place in one of Tanga&apos;s most prestigious developments.
+                Our team can walk you through the available units, expected use,
+                payment options and ownership process in simple terms.
               </p>
             </FadeInUp>
 
             <FadeInUp delay={0.25} className="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8">
               <div className="text-center p-4 sm:p-6 bg-[#f7f8f3] rounded-2xl">
-                <div className="text-2xl sm:text-3xl font-bold text-safe-accent mb-2">Sea Facing</div>
-                <p className="text-xs sm:text-sm text-[#536153]">Prime ocean views from select units</p>
+                <div className="text-2xl sm:text-3xl font-bold text-safe-accent mb-2">Clear</div>
+                <p className="text-xs sm:text-sm text-[#536153]">Simple guidance before you decide</p>
               </div>
               <div className="text-center p-4 sm:p-6 bg-[#f7f8f3] rounded-2xl">
-                <div className="text-2xl sm:text-3xl font-bold text-safe-accent mb-2">Freehold</div>
-                <p className="text-xs sm:text-sm text-[#536153]">Full ownership rights</p>
+                <div className="text-2xl sm:text-3xl font-bold text-safe-accent mb-2">Useful</div>
+                <p className="text-xs sm:text-sm text-[#536153]">Residential and commercial options</p>
               </div>
               <div className="text-center p-4 sm:p-6 bg-[#f7f8f3] rounded-2xl">
-                <div className="text-2xl sm:text-3xl font-bold text-safe-accent mb-2">Premium</div>
-                <p className="text-xs sm:text-sm text-[#536153]">High-end finishes throughout</p>
+                <div className="text-2xl sm:text-3xl font-bold text-safe-accent mb-2">Valuable</div>
+                <p className="text-xs sm:text-sm text-[#536153]">Built with long-term potential</p>
               </div>
             </FadeInUp>
           </div>
@@ -97,14 +95,14 @@ export default function RashidHeightsPage() {
       <Amenities />
 
       {/* Gallery Section */}
-      <section className="py-16 sm:py-24 bg-[#f7f8f3]">
+      <section className="py-16 sm:py-24 bg-[#fbfcf8]">
         <div className="container mx-auto px-4">
           <FadeInUp className="text-center mb-8 sm:mb-12">
             <span className="text-xs font-bold uppercase tracking-[0.3em] text-safe-accent">
-              Gallery
+              Project images
             </span>
             <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-safe-primary">
-              Project Gallery
+              View the plans and project images
             </h2>
           </FadeInUp>
 
@@ -125,32 +123,6 @@ export default function RashidHeightsPage() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="py-16 sm:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <FadeInUp className="text-center mb-8 sm:mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.3em] text-safe-accent">
-              Video Tour
-            </span>
-            <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-safe-primary">
-              Experience Rashid Heights
-            </h2>
-          </FadeInUp>
-
-          <FadeInUp delay={0.15}>
-            <div className="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden bg-[#111c11] flex items-center justify-center">
-              <div className="text-center text-white">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 rounded-full bg-safe-accent flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
-                  <i className="ri-play-fill text-2xl sm:text-3xl ml-1" />
-                </div>
-                <p className="text-base sm:text-lg">Watch the project video</p>
-                <p className="text-xs sm:text-sm text-white/60 mt-2">Coming soon</p>
-              </div>
-            </div>
-          </FadeInUp>
-        </div>
-      </section>
-
       {/* Inquiry Section */}
       <section id="inquiry" className="py-16 sm:py-24 bg-[#f7f8f3]">
         <div className="container mx-auto px-4">
@@ -160,11 +132,11 @@ export default function RashidHeightsPage() {
                 Get in Touch
               </span>
               <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-safe-primary">
-                Interested in Rashid Heights?
+                Speak to us about Rashid Heights.
               </h2>
               <p className="mt-4 text-base sm:text-lg text-[#536153]">
-                Contact us to learn more about availability, pricing, and to schedule
-                a viewing.
+                Contact us to ask about available units, pricing, payment
+                options and the next steps.
               </p>
             </FadeInUp>
 
@@ -241,10 +213,10 @@ export default function RashidHeightsPage() {
             <FadeInUp delay={0.25} className="mt-8 sm:mt-12 text-center">
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 text-[#536153]">
                 <a
-                  href="tel:+25574637371"
+                  href="tel:+255764485751"
                   className="flex items-center gap-2 hover:text-safe-accent transition text-sm sm:text-base"
                 >
-                  <i className="ri-phone-line" /> +255 746 373 71
+                  <i className="ri-phone-line" /> +255 764 485 751
                 </a>
                 <a
                   href="mailto:sales@safeinvestment.co.tz"

@@ -30,7 +30,7 @@ export default function FloatingControls() {
   return (
     <div className="fixed bottom-12 right-12 z-50 flex flex-row items-end gap-4">
       <a
-        href="https://wa.me/255770990980"
+        href="https://wa.me/255764485751"
         target="_blank"
         rel="noopener noreferrer"
         className="group flex items-center justify-center w-12 h-12 rounded-full bg-[#25D366] text-white shadow-lg hover:scale-110 transition-all duration-300"

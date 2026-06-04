@@ -67,7 +67,7 @@ export default function ContactPage() {
         <div className="w-full md:w-1/2 relative min-h-[40vh] md:min-h-[50vh] md:min-h-[calc(100vh-80px)] p-3 sm:p-4 md:p-8">
           <div className="relative w-full h-full rounded-2xl overflow-hidden">
             <Image
-              src="/img/build1.png"
+              src="/imgs2/JPEG/rashidheights.jpg"
               alt="Safe Investment"
               fill
               className="object-cover"
@@ -80,10 +80,10 @@ export default function ContactPage() {
                   Call Us
                 </p>
                 <a
-                  href="tel:+25574637371"
+                  href="tel:+255764485751"
                   className="text-base sm:text-lg font-bold text-safe-primary hover:text-safe-accent transition"
                 >
-                  +255 746 373 71
+                  +255 764 485 751
                 </a>
               </div>
 
@@ -138,7 +138,7 @@ export default function ContactPage() {
                     <i className="ri-linkedin-fill text-base sm:text-lg" />
                   </a>
                   <a
-                    href="https://wa.me/25574637371"
+                    href="https://wa.me/255764485751"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-9 h-9 sm:w-10 sm:h-10 bg-safe-primary text-white flex items-center justify-center rounded-xl hover:bg-safe-accent transition"
