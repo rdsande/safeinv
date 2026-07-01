@@ -17,48 +17,48 @@ import {
 
 const amenities = [
   {
-    name: "FREEHOLD",
+    name: "LARGE SITTING AREA",
     icon: <HomeSimple className="w-6 h-6" />,
   },
   {
-    name: "PRACTICAL LAYOUT",
+    name: "DINING ROOM",
     icon: <LayoutLeft className="w-6 h-6" />,
   },
   {
-    name: "SPACIOUS CARPARKS",
-    icon: <Garage className="w-6 h-6" />,
+    name: "PANTRY",
+    icon: <Shop className="w-6 h-6" />,
   },
   {
-    name: "EV CHARGER",
-    icon: <EvCharge className="w-6 h-6" />,
-  },
-  {
-    name: "3 TIER SECURITY",
-    icon: <SecurityPass className="w-6 h-6" />,
-  },
-  {
-    name: "LOW DENSITY",
+    name: "3 & 4 BEDROOMS",
     icon: <Community className="w-6 h-6" />,
   },
   {
-    name: "PREMIUM GYM",
-    icon: <Gym className="w-6 h-6" />,
+    name: "CLOSET ROOMS (C/R)",
+    icon: <Garage className="w-6 h-6" />,
   },
   {
-    name: "CHILDREN PLAYGROUND",
-    icon: <BasketballField className="w-6 h-6" />,
+    name: "PRIVATE W/C EACH",
+    icon: <SecurityPass className="w-6 h-6" />,
   },
   {
-    name: "PANORAMIC VIEWS",
+    name: "MULTIPLE BALCONIES",
+    icon: <Balcony className="w-6 h-6" />,
+  },
+  {
+    name: "SEA FACING VIEWS",
     icon: <SeaWaves className="w-6 h-6" />,
   },
   {
-    name: "BACK UP GENERATOR",
-    icon: <LightBulb className="w-6 h-6" />,
+    name: "DUPLEX LIVING",
+    icon: <HomeSimple className="w-6 h-6" />,
   },
   {
-    name: "CONVENIENCE STORE",
-    icon: <Shop className="w-6 h-6" />,
+    name: "OFFICE SPACE",
+    icon: <LayoutLeft className="w-6 h-6" />,
+  },
+  {
+    name: "EXCLUSIVE PENTHOUSE",
+    icon: <LightBulb className="w-6 h-6" />,
   },
   {
     name: "ROOFTOP TERRACE",

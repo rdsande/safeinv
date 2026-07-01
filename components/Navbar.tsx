@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import WhatsAppChatLink from "@/components/WhatsAppChatLink";
 
 export default function Navbar({
   variant = "transparent",
@@ -115,15 +116,10 @@ export default function Navbar({
               </AnimatePresence>
             </div>
 
-            <a
-              href="https://wa.me/255764485751"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`flex items-center gap-1.5 ${hoverColor} transition`}
-            >
+            <WhatsAppChatLink className={`flex items-center gap-1.5 ${hoverColor} transition`}>
               <i className="ri-whatsapp-line text-sm" />
               WHATSAPP
-            </a>
+            </WhatsAppChatLink>
 
             <Link
               href="/#contact"

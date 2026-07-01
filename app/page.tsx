@@ -1,9 +1,13 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FadeInUp from "@/components/FadeInUp";
+import WhatsAppChatLink from "@/components/WhatsAppChatLink";
+import EmailJsContactForm from "@/components/EmailJsContactForm";
 import Image from "next/image";
 
-export default async function Home() {
+export default function Home() {
   const services = [
     {
       name: "Property Management",
@@ -42,7 +46,7 @@ export default async function Home() {
       label: "Spacious Apartments",
       icon: "ri-home-4-line",
       desc: "Generously sized living units with premium finishes designed for modern family life.",
-      img: "/img/img001.jpg",
+      img: "/imgs2/penthouse.jpg",
     },
     {
       label: "Sea View Apartments",
@@ -65,26 +69,26 @@ export default async function Home() {
   ];
 
   return (
-    <main className="min-h-screen flex flex-col bg-white text-[#233123]">
+    <main className="min-h-screen flex flex-col bg-white text-[#233123] pt-[80px]">
       <Navbar />
 
       {/* HERO */}
-      <section className="relative min-h-screen w-full overflow-hidden">
+      <section className="relative min-h-[calc(100vh-80px+124px)] w-full overflow-hidden">
         <Image
-          src="/imgs2/JPEG/rashidheights.jpg"
+          src="/coverhero.jpg"
           alt="Safe Investment property development in Tanga"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#172417]/90 via-[#172417]/60 to-transparent" />
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/50 to-transparent" />
-        <div className="relative z-10 container mx-auto flex min-h-screen items-center px-4 pt-24 sm:pt-32 md:pt-36">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#172417]/70 via-[#172417]/40 to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/30 to-transparent" />
+        <div className="relative z-10 container mx-auto flex min-h-[calc(100vh-80px+124px)] items-center px-4 pt-16 sm:pt-32 md:pt-36 pb-14 sm:pb-16">
           <FadeInUp className="max-w-3xl text-white">
-            <h1 className="mt-4 sm:mt-6 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold leading-[1.15] sm:leading-[1.1] tracking-tight">
-              Safe Investment for property, construction and growth.
+            <h1 className="mt-4 sm:mt-6 text-2xl sm:text-2xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] sm:leading-[1.1] tracking-tight">
+              Build, buy, and invest in Tanga with confidence.
             </h1>
-            <p className="mt-4 sm:mt-6 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-white/85">
+            <p className="mt-4 sm:mt-6 max-w-2xl text-sm sm:text-sm md:text-base leading-relaxed text-white/85">
               Connecting you with residential, commercial and warehousing
               solutions in the region of Tanga.
             </p>
@@ -95,15 +99,10 @@ export default async function Home() {
               >
                 Explore Our Projects
               </a>
-              <a
-                href="https://wa.me/255764485751"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-white/40 px-6 py-3 sm:px-8 sm:py-4 text-center text-xs sm:text-sm font-bold uppercase tracking-widest text-white transition hover:bg-white hover:text-safe-primary"
-              >
+              <WhatsAppChatLink className="rounded-full border border-white/40 px-6 py-3 sm:px-8 sm:py-4 text-center text-xs sm:text-sm font-bold uppercase tracking-widest text-white transition hover:bg-white hover:text-safe-primary">
                 <i className="ri-whatsapp-line mr-2" />
                 WhatsApp us
-              </a>
+              </WhatsAppChatLink>
             </div>
           </FadeInUp>
         </div>
@@ -135,35 +134,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section id="services" className="bg-[#fbfcf8] py-16 sm:py-24">
-        <div className="container mx-auto px-4">
-          <FadeInUp className="mb-8 sm:mb-12 max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-[0.3em] text-safe-accent">
-              What we do
-            </span>
-            <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-safe-primary">
-              Simple services for property owners and investors.
-            </h2>
-          </FadeInUp>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service, i) => (
-              <FadeInUp key={service.name} delay={i * 0.07}>
-                <div className="rounded-3xl border border-safe-primary/10 bg-white p-6 sm:p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl h-full">
-                  <i className={`${service.icon} text-3xl text-safe-accent`} />
-                  <h3 className="mt-4 text-lg sm:text-xl font-semibold text-safe-primary">
-                    {service.name}
-                  </h3>
-                  <p className="mt-3 text-sm leading-6 text-[#536153]">
-                    {service.desc}
-                  </p>
-                </div>
-              </FadeInUp>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* RASHID HEIGHTS */}
       <section id="rashid-heights" className="bg-white text-safe-primary">
         {/* Main intro */}
@@ -178,17 +148,19 @@ export default async function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-6 sm:bottom-8 left-6 right-6 sm:left-8 sm:right-8 rounded-3xl bg-white/10 p-4 sm:p-6 backdrop-blur">
-                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-white/70">
+                <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-white">
                   Now rising
                 </p>
-                <h3 className="mt-2 text-2xl sm:text-3xl font-semibold">Rashid Heights</h3>
+                <h3 className="mt-2 text-2xl sm:text-3xl font-semibold text-white">
+                  Rashid Heights
+                </h3>
               </div>
             </FadeInUp>
             <FadeInUp delay={0.15}>
               <span className="text-xs font-bold uppercase tracking-[0.3em] text-safe-accent">
                 Featured project
               </span>
-              <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-semibold leading-tight">
+              <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight">
                 Rashid Heights, a practical investment in Tanga.
               </h2>
               <p className="mt-6 sm:mt-8 text-base sm:text-lg leading-7 sm:leading-8 text-[#536153]">
@@ -252,6 +224,35 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* SERVICES */}
+      <section id="services" className="bg-[#fbfcf8] py-16 sm:py-24">
+        <div className="container mx-auto px-4">
+          <FadeInUp className="mb-8 sm:mb-12 max-w-2xl">
+            <span className="text-xs font-bold uppercase tracking-[0.3em] text-safe-accent">
+              What we do
+            </span>
+            <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-safe-primary">
+              Simple services for property owners and investors.
+            </h2>
+          </FadeInUp>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, i) => (
+              <FadeInUp key={service.name} delay={i * 0.07}>
+                <div className="rounded-3xl border border-safe-primary/10 bg-white p-6 sm:p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl h-full">
+                  <i className={`${service.icon} text-3xl text-safe-accent`} />
+                  <h3 className="mt-4 text-lg sm:text-xl font-semibold text-safe-primary">
+                    {service.name}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-[#536153]">
+                    {service.desc}
+                  </p>
+                </div>
+              </FadeInUp>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CONTACT */}
       <section id="contact" className="bg-white py-16 sm:py-24">
         <div className="container mx-auto grid gap-8 lg:gap-12 px-4 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
@@ -292,73 +293,11 @@ export default async function Home() {
             </div>
           </FadeInUp>
           <FadeInUp delay={0.15}>
-            <form
-              action="/send-mail.php"
-              method="POST"
+            <EmailJsContactForm
+              pageTag="Home"
               className="rounded-[2rem] bg-[#f7f8f3] p-4 sm:p-6 md:p-10 shadow-sm"
-            >
-              <div className="space-y-4 sm:space-y-6">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="block text-sm font-semibold">
-                    Name
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    required
-                    className="w-full rounded-2xl border border-safe-primary/10 bg-white px-4 py-3 sm:px-5 sm:py-4 outline-none transition focus:border-safe-accent"
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="block text-sm font-semibold">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full rounded-2xl border border-safe-primary/10 bg-white px-4 py-3 sm:px-5 sm:py-4 outline-none transition focus:border-safe-accent"
-                      placeholder="you@example.com"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="phone" className="block text-sm font-semibold">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      className="w-full rounded-2xl border border-safe-primary/10 bg-white px-4 py-3 sm:px-5 sm:py-4 outline-none transition focus:border-safe-accent"
-                      placeholder="+255 700 000 000"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="mt-4 sm:mt-6 space-y-2">
-                <label htmlFor="message" className="block text-sm font-semibold">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={7}
-                  required
-                  className="w-full resize-none rounded-2xl border border-safe-primary/10 bg-white px-4 py-3 sm:px-5 sm:py-4 outline-none transition focus:border-safe-accent"
-                  placeholder="Tell us what you are looking for..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="mt-6 sm:mt-8 rounded-full bg-safe-primary px-6 py-3 sm:px-8 sm:py-4 text-xs sm:text-sm font-bold uppercase tracking-widest text-white transition hover:bg-safe-primary/90"
-              >
-                Send enquiry
-              </button>
-            </form>
+              buttonText="Send enquiry"
+            />
           </FadeInUp>
         </div>
       </section>

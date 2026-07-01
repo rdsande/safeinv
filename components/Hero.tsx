@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className="relative h-screen w-full">
       <Image
-        src="/img/hero.jpg"
+        src="/imgs2/coverimagebld.jpg"
         alt="The Meethaq Tower"
         fill
         className="object-cover"

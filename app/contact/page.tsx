@@ -1,63 +1,11 @@
 "use client";
 
-import React from "react";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import EmailJsContactForm from "@/components/EmailJsContactForm";
 
 export default function ContactPage() {
-  const [formData, setFormData] = React.useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-    _honey: "",
-  });
-  const [status, setStatus] = React.useState<
-    "idle" | "submitting" | "success" | "error"
-  >("idle");
-  const [notification, setNotification] = React.useState("");
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("submitting");
-    setNotification("");
-
-    try {
-      const response = await fetch("/send-mail.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (response.ok && result.status === "success") {
-        setStatus("success");
-        setNotification(
-          "Message sent successfully! We will get back to you soon.",
-        );
-        setFormData({ name: "", email: "", phone: "", message: "", _honey: "" });
-      } else {
-        setStatus("error");
-        setNotification(
-          result.message || "Something went wrong. Please try again.",
-        );
-      }
-    } catch (error) {
-      setStatus("error");
-      setNotification("Failed to send message. Please try again later.");
-    }
-  };
-
   return (
     <main className="min-h-screen flex flex-col bg-white pt-[80px]">
       <Navbar variant="solid" />
@@ -165,106 +113,12 @@ export default function ContactPage() {
               properties, construction services, or investment opportunities.
             </p>
 
-            <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
-              <input
-                type="text"
-                id="_honey"
-                value={formData._honey}
-                onChange={handleChange}
-                style={{ display: "none" }}
-                tabIndex={-1}
-                autoComplete="off"
-              />
-
-              <div className="space-y-2">
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-semibold text-safe-primary"
-                >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  placeholder="Your full name"
-                  className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-2xl bg-white border border-safe-primary/10 focus:border-safe-accent focus:ring-0 transition duration-200 outline-none text-gray-800 placeholder-gray-400"
-                />
-              </div>
-
-              <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
-                <div className="space-y-2">
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-semibold text-safe-primary"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="you@example.com"
-                    className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-2xl bg-white border border-safe-primary/10 focus:border-safe-accent focus:ring-0 transition duration-200 outline-none text-gray-800 placeholder-gray-400"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-semibold text-safe-primary"
-                  >
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    placeholder="+255 700 000 000"
-                    className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-2xl bg-white border border-safe-primary/10 focus:border-safe-accent focus:ring-0 transition duration-200 outline-none text-gray-800 placeholder-gray-400"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-semibold text-safe-primary"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  placeholder="Tell us what you're looking for..."
-                  className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-2xl bg-white border border-safe-primary/10 focus:border-safe-accent focus:ring-0 transition duration-200 outline-none text-gray-800 placeholder-gray-400 resize-none"
-                ></textarea>
-              </div>
-
-              {notification && (
-                <div
-                  className={`p-4 rounded-2xl text-sm ${status === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}
-                >
-                  {notification}
-                </div>
-              )}
-
-              <button
-                type="submit"
-                disabled={status === "submitting"}
-                className={`w-full bg-safe-primary text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold uppercase tracking-widest hover:bg-safe-primary/90 transition duration-200 mt-4 text-xs sm:text-sm ${status === "submitting" ? "opacity-50 cursor-not-allowed" : ""}`}
-              >
-                {status === "submitting" ? "Sending..." : "Send Message"}
-              </button>
-            </form>
+            <EmailJsContactForm
+              pageTag="Contact"
+              className="space-y-4 sm:space-y-6"
+              buttonClassName="w-full bg-safe-primary text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold uppercase tracking-widest hover:bg-safe-primary/90 transition duration-200 mt-4 text-xs sm:text-sm disabled:opacity-60"
+              buttonText="Send Message"
+            />
           </div>
         </div>
       </div>

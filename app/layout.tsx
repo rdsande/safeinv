@@ -23,7 +23,7 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
         />
-        <link rel="icon" href="/safelogo.png" />
+        <link rel="icon" href="/img/safelogo.png" />
       </head>
       <body className={dmSans.className}>
         <ClientLayout>{children}</ClientLayout>

@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Allow Next.js assets
+  RewriteRule ^_next/ - [L]
+
+  # Serve clean URLs from the exported .html files
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^([^\.]+)$ $1.html [L]
+</IfModule>
+
+# Ensure common MIME types are correct
+AddType text/css .css
+AddType application/javascript .js
+AddType application/javascript .mjs

@@ -5,69 +5,69 @@ import { InfoCircle } from "iconoir-react";
 
 const units = [
   {
-    id: "1 Bedroom",
+    id: "3 Bedroom Apartment",
     icon: "ri-home-4-line",
-    image: "/imgs2/JPEG/4.%20typical%20floor%20plan%20-%204th%20to%208th%20floor.jpg",
-    area: "106.57M²",
-    internal: "90.27M²",
-    external: "16.3M²",
-    beds: "1 BEDROOM",
-    baths: "2 BATHROOM",
+    image: "/imgs2/JPEG/3.%204%20bhk%20apartment%20-%203rd%20floor%20level.jpg",
+    area: "Exclusive Styles",
+    internal: "Large Sitting Area",
+    external: "Multiple Balconies",
+    beds: "3 BEDROOM + C/R",
+    baths: "PRIVATE W/C EACH",
     reverse: false,
   },
   {
-    id: "2 Bedroom",
-    icon: "ri-home-5-line",
-    image: "/imgs2/JPEG/4.%20typical%20floor%20plan%20-%204th%20to%208th%20floor%202.jpg",
-    area: "117.41M²",
-    internal: "99.45M²",
-    external: "17.96M²",
-    beds: "2 BEDROOM",
-    baths: "2 BATHROOM",
+    id: "4 Bedroom Apartment",
+    icon: "ri-home-8-line",
+    image: "/imgs2/JPEG/4.%20typical%20floor%20plan%20-%204th%20to%208th%20floor.jpg",
+    area: "Modern Layout",
+    internal: "Spacious Design",
+    external: "4th to 8th Floor",
+    beds: "4 BEDROOM + C/R",
+    baths: "PRIVATE W/C EACH",
     reverse: true,
   },
   {
-    id: "3 Bedroom",
-    icon: "ri-home-8-line",
-    image: "/imgs2/JPEG/3.%204%20bhk%20apartment%20-%203rd%20floor%20level.jpg",
-    area: "184.94M²",
-    internal: "156.65M²",
-    external: "28.29M²",
-    beds: "3 BEDROOM",
-    baths: "3 BATHROOM",
+    id: "4 Bedroom Duplex",
+    icon: "ri-building-4-line",
+    image: "/imgs2/JPEG/4.%20typical%20floor%20plan%20-%204th%20to%208th%20floor%202.jpg",
+    area: "Exclusive Styles",
+    internal: "Large Sitting Area",
+    external: "Dining + Pantry",
+    beds: "4 BEDROOM DUPLEX",
+    baths: "PRIVATE W/C EACH",
+    reverse: false,
+  },
+  {
+    id: "Sea Facing Penthouse",
+    icon: "ri-home-smile-line",
+    image: "/imgs2/JPEG/5.%20penthouse%20entry%20levelv%20-%209th%20floor.jpg",
+    area: "366 – 383 M²",
+    internal: "Duplex Residence",
+    external: "Entry Level (9th)",
+    beds: "PENTHOUSE DUPLEX",
+    baths: "MULTIPLE BATHS",
+    reverse: true,
+  },
+  {
+    id: "Penthouse Upper Level",
+    icon: "ri-home-gear-line",
+    image: "/imgs2/JPEG/6.%20penthouse%20upper%20level%20-%2010th%20floor.jpg",
+    area: "Private Retreat",
+    internal: "Main Bedrooms",
+    external: "Upper Level (10th)",
+    beds: "PRIVATE QUARTERS",
+    baths: "EN-SUITE BATHS",
     reverse: false,
   },
   {
     id: "Office Space",
     icon: "ri-building-line",
     image: "/imgs2/JPEG/2.%20typical%20office%20floor-%20%202nd%20floor.jpg",
-    area: "150.00M²",
-    internal: "130.00M²",
-    external: "20.00M²",
-    beds: "COMMERCIAL",
-    baths: "2 BATHROOM",
-    reverse: true,
-  },
-  {
-    id: "Shop Space",
-    icon: "ri-store-3-line",
-    image: "/imgs2/JPEG/1.%20ground%20floor.jpg",
-    area: "80.00M²",
-    internal: "70.00M²",
-    external: "10.00M²",
-    beds: "RETAIL",
-    baths: "1 BATHROOM",
-    reverse: false,
-  },
-  {
-    id: "Restaurant",
-    icon: "ri-restaurant-line",
-    image: "/imgs2/JPEG/1.%20ground%20floor.jpg",
-    area: "200.00M²",
-    internal: "170.00M²",
-    external: "30.00M²",
-    beds: "DINING",
-    baths: "4 BATHROOM",
+    area: "Commercial Layout",
+    internal: "Office Plan",
+    external: "2nd Floor",
+    beds: "OFFICE SPACE",
+    baths: "",
     reverse: true,
   },
 ];
@@ -123,9 +123,11 @@ export default function FloorPlans() {
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-safe-primary">
                     {unit.beds}
                   </h3>
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-safe-primary opacity-80">
-                    {unit.baths}
-                  </h3>
+                  {unit.baths ? (
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-safe-primary opacity-80">
+                      {unit.baths}
+                    </h3>
+                  ) : null}
                 </div>
 
                 {/* Measurements */}
