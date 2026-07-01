@@ -73,19 +73,28 @@ export default function Home() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative min-h-[calc(100vh-80px+124px)] w-full overflow-hidden">
+      <section className="relative h-[calc(100vh-80px)] sm:min-h-[calc(100vh-80px+124px)] w-full overflow-hidden">
+        {/* Mobile image */}
+        <Image
+          src="/rashidmobile.jpg"
+          alt="Safe Investment property development in Tanga"
+          fill
+          className="object-cover block sm:hidden"
+          priority
+        />
+        {/* Desktop image */}
         <Image
           src="/coverhero.jpg"
           alt="Safe Investment property development in Tanga"
           fill
-          className="object-cover"
+          className="object-cover hidden sm:block"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#172417]/70 via-[#172417]/40 to-transparent" />
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/30 to-transparent" />
-        <div className="relative z-10 container mx-auto flex min-h-[calc(100vh-80px+124px)] items-center px-4 pt-16 sm:pt-32 md:pt-36 pb-14 sm:pb-16">
+        <div className="relative z-10 container mx-auto flex h-[calc(100vh-80px)] sm:min-h-[calc(100vh-80px+124px)] items-end px-4 pb-10 sm:pb-16 md:pb-20">
           <FadeInUp className="max-w-3xl text-white">
-            <h1 className="mt-4 sm:mt-6 text-2xl sm:text-2xl md:text-4xl lg:text-5xl font-semibold leading-[1.15] sm:leading-[1.1] tracking-tight">
+            <h1 className="mt-4 sm:mt-6 text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.1] tracking-tight">
               Build, buy, and invest in Tanga with confidence.
             </h1>
             <p className="mt-4 sm:mt-6 max-w-2xl text-sm sm:text-sm md:text-base leading-relaxed text-white/85">
@@ -194,11 +203,11 @@ export default function Home() {
                 Available unit types
               </h3>
             </FadeInUp>
-            <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-3 sm:gap-6 grid-cols-2 lg:grid-cols-4">
               {unitTypes.map((unit, i) => (
                 <FadeInUp key={unit.label} delay={i * 0.1}>
                   <div className="rounded-2xl overflow-hidden bg-white border border-safe-primary/10 shadow-sm h-full flex flex-col">
-                    <div className="relative h-36 sm:h-48 flex-shrink-0">
+                    <div className="relative h-32 sm:h-48 flex-shrink-0">
                       <Image
                         src={unit.img}
                         alt={unit.label}
@@ -207,7 +216,7 @@ export default function Home() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                     </div>
-                    <div className="p-4 sm:p-5 flex flex-col flex-1">
+                    <div className="p-3 sm:p-5 flex flex-col flex-1">
                       <i className={`${unit.icon} text-xl sm:text-2xl text-safe-accent`} />
                       <h4 className="mt-2 font-semibold text-sm sm:text-base">
                         {unit.label}
@@ -235,10 +244,10 @@ export default function Home() {
               Simple services for property owners and investors.
             </h2>
           </FadeInUp>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service, i) => (
               <FadeInUp key={service.name} delay={i * 0.07}>
-                <div className="rounded-3xl border border-safe-primary/10 bg-white p-6 sm:p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl h-full">
+                <div className="rounded-3xl border border-safe-primary/10 bg-white p-5 sm:p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl h-full">
                   <i className={`${service.icon} text-3xl text-safe-accent`} />
                   <h3 className="mt-4 text-lg sm:text-xl font-semibold text-safe-primary">
                     {service.name}

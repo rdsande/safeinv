@@ -12,7 +12,7 @@ export default function ContactPage() {
 
       <div className="flex-grow flex flex-col md:flex-row h-full">
         {/* Left Side - Image */}
-        <div className="w-full md:w-1/2 relative min-h-[40vh] md:min-h-[50vh] md:min-h-[calc(100vh-80px)] p-3 sm:p-4 md:p-8">
+        <div className="w-full md:w-1/2 relative min-h-[45vh] md:min-h-[calc(100vh-80px)] p-3 sm:p-4 md:p-6">
           <div className="relative w-full h-full rounded-2xl overflow-hidden">
             <Image
               src="/imgs2/JPEG/rashidheights.jpg"
@@ -100,12 +100,12 @@ export default function ContactPage() {
         </div>
 
         {/* Right Side - Form */}
-        <div className="w-full md:w-1/2 bg-[#f7f8f3] p-6 sm:p-8 md:p-16 lg:p-24 flex flex-col justify-center">
+        <div className="w-full md:w-1/2 bg-[#f7f8f3] p-6 sm:p-8 md:p-12 lg:p-20 flex flex-col justify-center">
           <div className="max-w-lg w-full mx-auto">
             <span className="uppercase tracking-widest text-[10px] sm:text-xs font-bold text-safe-accent mb-3 sm:mb-4 block">
               CONTACT
             </span>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl md:text-5xl font-semibold text-safe-primary mb-3 sm:mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-safe-primary mb-3 sm:mb-4">
               Get in touch
             </h1>
             <p className="text-sm sm:text-base text-[#536153] mb-8 sm:mb-12">

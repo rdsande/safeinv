@@ -79,7 +79,7 @@ export default function FloorPlans() {
         {units.map((unit, index) => (
           <FadeIn key={unit.id} delay={index * 0.1}>
             <div
-              className={`flex flex-col ${unit.reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-8 md:gap-12 lg:gap-24`}
+              className={`flex flex-col ${unit.reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-6 md:gap-12 lg:gap-24`}
             >
               {/* Image Section */}
               <div className="w-full md:w-3/5 relative group">
@@ -106,45 +106,45 @@ export default function FloorPlans() {
               {/* Details Section */}
               <div className="w-full md:w-2/5 space-y-6 sm:space-y-8 md:space-y-12">
                 {/* Header */}
-                <div className="flex items-baseline gap-3 sm:gap-4 border-b border-gray-100 pb-4">
+                <div className="flex flex-col gap-1 border-b border-gray-100 pb-4">
                   <div className="flex items-center gap-2 sm:gap-3">
-                    <i className={`${unit.icon} text-2xl sm:text-3xl text-safe-accent`} />
-                    <span className="text-2xl sm:text-3xl font-bold text-safe-primary">
+                    <i className={`${unit.icon} text-xl sm:text-2xl text-safe-accent`} />
+                    <span className="text-lg sm:text-2xl font-bold text-safe-primary leading-tight">
                       {unit.id}
                     </span>
                   </div>
-                  <span className="text-lg sm:text-xl font-medium text-gray-500">
+                  <span className="text-sm sm:text-base font-medium text-gray-500 pl-7 sm:pl-9">
                     {unit.area}
                   </span>
                 </div>
 
                 {/* Main Features */}
-                <div className="space-y-2">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-safe-primary">
+                <div className="space-y-1.5">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-serif text-safe-primary">
                     {unit.beds}
                   </h3>
                   {unit.baths ? (
-                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-safe-primary opacity-80">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-serif text-safe-primary opacity-80">
                       {unit.baths}
                     </h3>
                   ) : null}
                 </div>
 
                 {/* Measurements */}
-                <div className="grid grid-cols-2 gap-4 sm:gap-8 pt-4">
+                <div className="grid grid-cols-2 gap-4 sm:gap-6 pt-4">
                   <div className="space-y-1">
-                    <p className="text-xs uppercase tracking-widest text-gray-400">
+                    <p className="text-[10px] sm:text-xs uppercase tracking-widest text-gray-400">
                       Internal
                     </p>
-                    <p className="text-lg sm:text-xl font-bold text-safe-primary">
+                    <p className="text-sm sm:text-base font-bold text-safe-primary">
                       {unit.internal}
                     </p>
                   </div>
                   <div className="space-y-1">
-                    <p className="text-xs uppercase tracking-widest text-gray-400">
+                    <p className="text-[10px] sm:text-xs uppercase tracking-widest text-gray-400">
                       External
                     </p>
-                    <p className="text-lg sm:text-xl font-bold text-safe-primary">
+                    <p className="text-sm sm:text-base font-bold text-safe-primary">
                       {unit.external}
                     </p>
                   </div>

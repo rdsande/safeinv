@@ -23,18 +23,27 @@ export default function RashidHeightsPage() {
       <Navbar variant="solid" />
 
       {/* Hero Section */}
-      <section className="relative h-[calc(60vh+124px)] sm:h-[calc(70vh+124px)] min-h-[544px] sm:min-h-[644px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[calc(100vh-80px)] sm:h-[calc(70vh+124px)] sm:min-h-[644px] flex items-end overflow-hidden">
         <div className="absolute inset-0">
+          {/* Mobile image */}
+          <Image
+            src="/rashidmobile.jpg"
+            alt="Rashid Heights"
+            fill
+            className="object-cover block sm:hidden"
+            priority
+          />
+          {/* Desktop image */}
           <Image
             src="/coverhero.jpg"
             alt="Rashid Heights"
             fill
-            className="object-cover"
+            className="object-cover hidden sm:block"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#111c11]/70 via-[#111c11]/40 to-transparent" />
         </div>
-        <div className="relative z-10 container mx-auto px-4 text-white -mt-5 sm:mt-0 pb-14 sm:pb-16">
+        <div className="relative z-10 container mx-auto px-4 text-white pb-10 sm:pb-16 md:pb-20">
           <FadeInUp>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight mb-3 sm:mb-4">
               Rashid Tower
